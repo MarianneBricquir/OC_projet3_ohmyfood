@@ -78,21 +78,22 @@
 .chargement {
     width: 100%;
     height: 100%;
-    background-color: $secondary-color;
-    z-index:4;
+    background: white;
+    position: fixed;
+    animation: page_chargement 2s forwards;
     &__loader {
-        position:absolute;
-        left:50%;
-        right: 50%;
-        bottom:50%;
-        top:50%;
+        position: absolute;
+        left: 45%;
+        right:45%;
+        top: 45%;
+        bottom:45%;
         width: 60px;
         height: 60px;
-        z-index: 3;
-        border: 8px solid #f3f3f3;
+        z-index: 4;
+        border: 6px solid #f3f3f3;
         border-radius: 50%;
-        border-top: 8px solid $tertiary-color;
-        animation: spin 3s ease-in-out forwards;
+        border-top: 6px solid $primary-color;
+        animation: loader 2s ease-in-out forwards;
     }
 }
 

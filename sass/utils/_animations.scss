@@ -7,12 +7,52 @@
     }
 }
 
-@keyframes spin {
+@keyframes loader {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
-        visibility: hidden;
     }
+}
+
+@keyframes page_chargement {
+    0% {
+        opacity:1;
+        z-index:3;
+    }
+    99%{
+        opacity: 1;
+        z-index:3;
+    }
+    100% {
+       opacity:0;
+       z-index:-1;
+    }
+}
+
+$duration: 1s;
+
+@keyframes plats {
+    0% {
+    opacity:0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+    opacity:1;
+    }
+   }
+
+.menu-entree{
+    animation: plats $duration ease-in-out backwards 500ms;
+}
+
+.menu-plat{
+    animation: plats $duration ease-in-out backwards 1000ms;
+}
+
+.menu-dessert{
+    animation: plats $duration ease-in-out backwards 1500ms;
 }
