@@ -53,6 +53,27 @@
 @keyframes commande {
   0% {
     transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes prix {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-85px);
+  }
+}
+@keyframes a_text {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 65%;
   }
 }
 /*Définition des fondations du site : normes*/
@@ -632,9 +653,44 @@ p {
   justify-content: space-between;
   margin-top: 8px;
 }
+.plat__desc__text {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .plat__desc__prix {
-  margin-right: 15px;
+  /*width: 10%;*/
   font-weight: bold;
+}
+.plat:hover .plat-commande {
+  animation: commande 1s alternate both;
+}
+.plat:hover .plat__desc__prix {
+  animation: prix 1s alternate both;
+}
+.plat:hover .plat__desc__text {
+  animation: a_text 1s alternate both;
+}
+
+.plat-commande {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  width: 25%;
+  height: 80px;
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  transform-origin: right;
+}
+.plat-commande__check {
+  color: #fff;
+  font-size: 30px;
 }
 
 .lien-plat:hover {
@@ -651,27 +707,6 @@ p {
 
 .menu-dessert {
   animation: plats 1s ease-in-out backwards 1500ms;
-}
-
-.plat-commande {
-  position: absolute;
-  left: 75%;
-  top: 0;
-  width: 25%;
-  height: 80px;
-  background-color: #99e2d0;
-  border-radius: 0px 20px 20px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  /*&:hover{
-      animation: commande 3s;
-  }*/
-}
-.plat-commande__check {
-  color: #fff;
-  font-size: 30px;
 }
 
 /* Tablett and Desktop version : screen < 768 px*/

@@ -70,10 +70,45 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 8px;
+        &__text{
+            width: 90%;
+            white-space : nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         &__prix {
-            margin-right: 15px;
+            /*width: 10%;*/
             font-weight: bold;
         }
+    }
+    &:hover .plat-commande{
+        animation: commande 1s alternate both;
+    }
+    &:hover .plat__desc__prix{
+        animation: prix 1s alternate both;
+    }
+    &:hover .plat__desc__text{
+        animation: a_text 1s alternate both;
+    }
+}
+
+.plat-commande {
+    position: absolute;
+    left: 75%;
+    top:0;
+    width: 25%;
+    height: 80px;
+    background-color: $tertiary-color;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+    opacity:0;
+    transform-origin:right;
+    &__check {
+        color: #fff;
+        font-size:30px;
     }
 }
 
@@ -93,26 +128,6 @@
     animation: plats $duration ease-in-out backwards 1500ms;
 }
 
-.plat-commande {
-    position: absolute;
-    left: 75%;
-    top:0;
-    width: 25%;
-    height: 80px;
-    background-color: $tertiary-color;
-    border-radius: 0px 20px 20px 0px;
-    display: flex;
-    flex-direction:column;
-    justify-content:space-around;
-    align-items: center;
-    /*&:hover{
-        animation: commande 3s;
-    }*/
-    &__check {
-        color: #fff;
-        font-size:30px;
-    }
-}
 
 /* Tablett and Desktop version : screen < 768 px*/
 @media screen and (min-width: 768px) {

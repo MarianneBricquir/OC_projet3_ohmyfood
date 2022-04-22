@@ -7,7 +7,6 @@
     }
 }
 
-
 /* Loading spinner */
 @keyframes loader {
     0% {
@@ -20,16 +19,16 @@
 
 @keyframes page_chargement {
     0% {
-        opacity:1;
-        z-index:3;
-    }
-    99%{
         opacity: 1;
-        z-index:3;
+        z-index: 3;
+    }
+    99% {
+        opacity: 1;
+        z-index: 3;
     }
     100% {
-       opacity:0;
-       z-index:-1;
+        opacity: 0;
+        z-index: -1;
     }
 }
 
@@ -39,19 +38,42 @@
 $duration: 1s;
 @keyframes plats {
     0% {
-    opacity:0;
+        opacity: 0;
     }
-    50%{
-        opacity:0.5;
+    50% {
+        opacity: 0.5;
     }
     100% {
-    opacity:1;
+        opacity: 1;
     }
-   }
+}
 
 /* Plats : commande*/
 @keyframes commande {
     0% {
-    transform: scaleX(0)
+        transform: scaleX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes prix {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-85px);
+    }
+}
+
+@keyframes a_text {
+    0% {
+        width:100%;
+    }
+    100% {
+        width:65%;
     }
 }
