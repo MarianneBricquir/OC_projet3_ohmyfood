@@ -304,13 +304,11 @@ p {
   background: white;
   position: fixed;
   animation: page_chargement 2s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .chargement__loader {
-  position: absolute;
-  left: 45%;
-  right: 45%;
-  top: 45%;
-  bottom: 45%;
   width: 60px;
   height: 60px;
   z-index: 4;
