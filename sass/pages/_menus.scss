@@ -13,7 +13,7 @@
 .menu {
     box-sizing: border-box;
     width: 100%;
-    height: 1500px;
+    height: 1200px;
     background-color: $main-color;
     margin-top: -60px;
     border-radius: 40px 40px 0px 0px;
@@ -45,21 +45,22 @@
             border-bottom: 3px solid $tertiary-color;
         }
     }
-    &__commande{
+    &__commande {
         width: 100%;
-        margin-top:30px;
-        margin-bottom:30px;
-        display:flex;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
         justify-content: center;
-
     }
 }
 
 .plat {
     box-sizing: border-box;
+    position: relative;
     margin-top: -10px;
     margin-bottom: 20px;
     width: 100%;
+    height: 80px;
     background-color: #fff;
     box-shadow: 4px 6px 10px 0px $shadow-color;
     border-radius: 20px 20px 20px 20px;
@@ -68,7 +69,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top:8px;
+        margin-top: 8px;
         &__prix {
             margin-right: 15px;
             font-weight: bold;
@@ -78,6 +79,39 @@
 
 .lien-plat:hover {
     cursor: pointer;
+}
+
+.menu-entree {
+    animation: plats $duration ease-in-out backwards 500ms;
+}
+
+.menu-plat {
+    animation: plats $duration ease-in-out backwards 1000ms;
+}
+
+.menu-dessert {
+    animation: plats $duration ease-in-out backwards 1500ms;
+}
+
+.plat-commande {
+    position: absolute;
+    left: 75%;
+    top:0;
+    width: 25%;
+    height: 80px;
+    background-color: $tertiary-color;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+    /*&:hover{
+        animation: commande 3s;
+    }*/
+    &__check {
+        color: #fff;
+        font-size:30px;
+    }
 }
 
 /* Tablett and Desktop version : screen < 768 px*/

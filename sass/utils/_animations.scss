@@ -7,6 +7,8 @@
     }
 }
 
+
+/* Loading spinner */
 @keyframes loader {
     0% {
         transform: rotate(0deg);
@@ -31,8 +33,10 @@
     }
 }
 
-$duration: 1s;
+/*Animations menu page */
 
+/* Plats : entrees, plats, desserts */
+$duration: 1s;
 @keyframes plats {
     0% {
     opacity:0;
@@ -45,14 +49,9 @@ $duration: 1s;
     }
    }
 
-.menu-entree{
-    animation: plats $duration ease-in-out backwards 500ms;
-}
-
-.menu-plat{
-    animation: plats $duration ease-in-out backwards 1000ms;
-}
-
-.menu-dessert{
-    animation: plats $duration ease-in-out backwards 1500ms;
+/* Plats : commande*/
+@keyframes commande {
+    0% {
+    transform: scaleX(0)
+    }
 }

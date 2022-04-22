@@ -13,6 +13,7 @@
     transform: scale(1);
   }
 }
+/* Loading spinner */
 @keyframes loader {
   0% {
     transform: rotate(0deg);
@@ -35,6 +36,8 @@
     z-index: -1;
   }
 }
+/*Animations menu page */
+/* Plats : entrees, plats, desserts */
 @keyframes plats {
   0% {
     opacity: 0;
@@ -46,18 +49,12 @@
     opacity: 1;
   }
 }
-.menu-entree {
-  animation: plats 1s ease-in-out backwards 500ms;
+/* Plats : commande*/
+@keyframes commande {
+  0% {
+    transform: scaleX(0);
+  }
 }
-
-.menu-plat {
-  animation: plats 1s ease-in-out backwards 1000ms;
-}
-
-.menu-dessert {
-  animation: plats 1s ease-in-out backwards 1500ms;
-}
-
 /*Définition des fondations du site : normes*/
 body {
   box-sizing: border-box;
@@ -492,6 +489,8 @@ p {
   border-radius: 20px 20px 0px 0px;
 }
 .restau__img img {
+  display: flex;
+  align-self: center;
   width: 100%;
   height: auto;
 }
@@ -557,7 +556,9 @@ p {
   }
 
   .restau__img img {
-    width: 150%;
+    display: flex;
+    align-self: center;
+    width: 100%;
     height: auto;
   }
 }
@@ -576,7 +577,7 @@ p {
 .menu {
   box-sizing: border-box;
   width: 100%;
-  height: 1500px;
+  height: 1200px;
   background-color: #f6f6f6ff;
   margin-top: -60px;
   border-radius: 40px 40px 0px 0px;
@@ -617,9 +618,11 @@ p {
 
 .plat {
   box-sizing: border-box;
+  position: relative;
   margin-top: -10px;
   margin-bottom: 20px;
   width: 100%;
+  height: 80px;
   background-color: #fff;
   box-shadow: 4px 6px 10px 0px #dedede;
   border-radius: 20px 20px 20px 20px;
@@ -638,6 +641,39 @@ p {
 
 .lien-plat:hover {
   cursor: pointer;
+}
+
+.menu-entree {
+  animation: plats 1s ease-in-out backwards 500ms;
+}
+
+.menu-plat {
+  animation: plats 1s ease-in-out backwards 1000ms;
+}
+
+.menu-dessert {
+  animation: plats 1s ease-in-out backwards 1500ms;
+}
+
+.plat-commande {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  width: 25%;
+  height: 80px;
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /*&:hover{
+      animation: commande 3s;
+  }*/
+}
+.plat-commande__check {
+  color: #fff;
+  font-size: 30px;
 }
 
 /* Tablett and Desktop version : screen < 768 px*/
