@@ -70,9 +70,9 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 8px;
-        &__text{
+        &__text {
             width: 90%;
-            white-space : nowrap;
+            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
@@ -81,36 +81,42 @@
             font-weight: bold;
         }
     }
-    &:hover .plat-commande{
-        animation: commande 1s alternate both;
+    &:hover .plat-commande {
+        -webkit-animation: commande 0.5s ease forwards;
+        &__check{
+            -webkit-animation: icon-rotate 0.5s ease-in forwards;
+        }
     }
-    &:hover .plat__desc__prix{
-        animation: prix 1s alternate both;
+    &:hover .plat__desc__prix {
+        -webkit-animation: prix 0.5s ease forwards;
     }
-    &:hover .plat__desc__text{
-        animation: a_text 1s alternate both;
-    }
+    &:hover .plat__desc__text {
+        -webkit-animation: a_text 0.5s ease forwards;
+    } 
 }
+
 
 .plat-commande {
     position: absolute;
     left: 75%;
-    top:0;
+    top: 0;
     width: 25%;
     height: 80px;
     background-color: $tertiary-color;
     border-radius: 0px 20px 20px 0px;
     display: flex;
-    flex-direction:column;
-    justify-content:space-around;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    opacity:0;
-    transform-origin:right;
+    opacity: 0;
+    transform-origin: right;
+    -webkit-animation: commande-reverse alternate 1s ease;
     &__check {
         color: #fff;
-        font-size:30px;
+        font-size: 30px;
     }
 }
+
 
 .lien-plat:hover {
     cursor: pointer;
@@ -127,7 +133,6 @@
 .menu-dessert {
     animation: plats $duration ease-in-out backwards 1500ms;
 }
-
 
 /* Tablett and Desktop version : screen < 768 px*/
 @media screen and (min-width: 768px) {

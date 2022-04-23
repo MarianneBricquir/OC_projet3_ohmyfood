@@ -60,6 +60,17 @@
     opacity: 1;
   }
 }
+@keyframes commande-reverse {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 1;
+    z-index: 2;
+  }
+}
 @keyframes prix {
   0% {
     transform: translateX(0);
@@ -74,6 +85,14 @@
   }
   100% {
     width: 65%;
+  }
+}
+@keyframes icon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /*Définition des fondations du site : normes*/
@@ -664,13 +683,16 @@ p {
   font-weight: bold;
 }
 .plat:hover .plat-commande {
-  animation: commande 1s alternate both;
+  -webkit-animation: commande 0.5s ease forwards;
+}
+.plat:hover .plat-commande__check {
+  -webkit-animation: icon-rotate 0.5s ease-in forwards;
 }
 .plat:hover .plat__desc__prix {
-  animation: prix 1s alternate both;
+  -webkit-animation: prix 0.5s ease forwards;
 }
 .plat:hover .plat__desc__text {
-  animation: a_text 1s alternate both;
+  -webkit-animation: a_text 0.5s ease forwards;
 }
 
 .plat-commande {
@@ -687,6 +709,7 @@ p {
   align-items: center;
   opacity: 0;
   transform-origin: right;
+  -webkit-animation: commande-reverse alternate 1s ease;
 }
 .plat-commande__check {
   color: #fff;
