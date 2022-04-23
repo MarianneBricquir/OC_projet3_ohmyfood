@@ -48,7 +48,7 @@ $duration: 1s;
     }
 }
 
-/* Plats : commande*/
+/* Plats : commande */
 @keyframes commande {
     0% {
         transform: scaleX(0);
@@ -68,7 +68,6 @@ $duration: 1s;
     100% {
         transform: scaleX(0);
         opacity: 1;
-        z-index: 2;
     }
 }
 
@@ -80,6 +79,14 @@ $duration: 1s;
         transform: translateX(-85px);
     }
 }
+@keyframes prix-reverse {
+    0% {
+        transform: translateX(-85px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 @keyframes a_text {
     0% {
@@ -87,6 +94,15 @@ $duration: 1s;
     }
     100% {
         width: 65%;
+    }
+}
+
+@keyframes a_text-reverse {
+    0% {
+        width: 65%;
+    }
+    100% {
+        width: 100%;
     }
 }
 
