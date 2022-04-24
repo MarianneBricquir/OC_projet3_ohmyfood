@@ -33,8 +33,7 @@
 }
 
 /*Animations menu page */
-
-/* Plats : entrees, plats, desserts */
+/* Plats : entrees, plats, desserts 
 $duration: 1s;
 @keyframes plats {
     0% {
@@ -47,6 +46,23 @@ $duration: 1s;
         opacity: 1;
     }
 }
+*/
+
+/*Plats : plat après plat*/
+$anim-dur: 200ms;
+
+@keyframes plat_par_plat {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* Plats : commande */
 @keyframes commande {
@@ -87,19 +103,36 @@ $duration: 1s;
         transform: translateX(0);
     }
 }
+@keyframes a_titre {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes a_titre-reverse {
+    0% {
+        width: 80%;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 @keyframes a_text {
     0% {
         width: 100%;
     }
     100% {
-        width: 65%;
+        width: 62%;
     }
 }
 
 @keyframes a_text-reverse {
     0% {
-        width: 65%;
+        width: 62%;
     }
     100% {
         width: 100%;
