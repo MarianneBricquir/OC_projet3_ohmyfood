@@ -24,11 +24,6 @@
     }
 }
 
-/*Titles*/
-.accueilTitle {
-    @include title_accueil;
-}
-
 /*Sections : presentation, fonctionnement et restaurants*/
 .presentation {
     @include flex_column_center;

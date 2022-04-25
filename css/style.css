@@ -186,11 +186,12 @@ body {
 
 h1,
 h2,
+h3,
 p {
   margin: 0px;
 }
 
-h2,
+h3,
 p {
   font-family: "Roboto", sans-serif;
 }
@@ -201,6 +202,11 @@ h1 {
 }
 
 h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+h3 {
   font-size: 20px;
 }
 
@@ -287,7 +293,7 @@ p {
 .footer__text--icon2 {
   font-size: 11px;
 }
-.footer__text::hover {
+.footer__text:hover {
   color: #fff;
 }
 
@@ -435,12 +441,6 @@ p {
   font-weight: 600;
   background-color: #ebebebff;
   border: 0px;
-}
-
-/*Titles*/
-.accueilTitle {
-  font-size: 24px;
-  font-weight: 800;
 }
 
 /*Sections : presentation, fonctionnement et restaurants*/
