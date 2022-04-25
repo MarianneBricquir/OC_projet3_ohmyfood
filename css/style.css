@@ -388,7 +388,7 @@ p {
   height: 100%;
   background: white;
   position: fixed;
-  animation: page_chargement 2s forwards;
+  animation: page_chargement 2s ease-in-out forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,7 +397,7 @@ p {
   width: 60px;
   height: 60px;
   z-index: 4;
-  border: 6px solid #f3f3f3;
+  border: 6px solid #ff79da20;
   border-radius: 50%;
   border-top: 6px solid #9356dc;
   animation: loader 2s ease-in-out forwards;
