@@ -1,7 +1,9 @@
+/*Définition du footer*/
+
 .footer {
     box-sizing: border-box;
     width: 100%;
-    background-color: #3a3a3a;
+    background-color: $darkest-grey;
     padding:5%;
     &__logo {
         font-family: 'Shrikhand';

@@ -1,3 +1,6 @@
+/*Page des menus*/
+
+/*Bandeau restaurant : image*/
 .bandeau-restau {
     display: flex;
     align-items: center;
@@ -10,10 +13,11 @@
     }
 }
 
+/*Menus: Nom du restau, entrées, plats, desserts*/
 .menu {
     box-sizing: border-box;
     width: 100%;
-    background-color: $main-color;
+    background-color: $background-grey;
     margin-top: -60px;
     border-radius: 40px 40px 0px 0px;
     padding: 5%;
@@ -34,6 +38,7 @@
             position: relative;
             font-size: 18px;
         }
+        /*Entrées, plats, desserts soulignés*/
         &__partie:before {
             content: "";
             position: absolute;
@@ -53,6 +58,7 @@
     }
 }
 
+/* Card plat */
 .plat {
     box-sizing: border-box;
     position: relative;
@@ -65,6 +71,7 @@
     border-radius: 20px 20px 20px 20px;
     padding: 15px;
     animation: plat_par_plat $anim-dur backwards ease-in-out;
+    /* Titre du plat */
     &__titre {
         width: 90%;
         white-space: nowrap;
@@ -72,11 +79,13 @@
         text-overflow: ellipsis;
         animation: a_titre-reverse 0.5s ease forwards;
     }
+    /* Description du plat + prix */
     &__desc {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 8px;
+        /* Description du plat */
         &__text {
             width: 80%;
             white-space: nowrap;
@@ -84,11 +93,13 @@
             text-overflow: ellipsis;
             animation: a_text-reverse 0.5s ease forwards;
         }
+        /* Prix du plat */
         &__prix {
             font-weight: bold;
             animation: prix-reverse 0.5s ease forwards;
         }
     }
+    /*Animation : au survol, sélection du plat avec case cochée verte*/
     &:hover .plat-commande {
         -webkit-animation: commande 0.5s ease forwards;
         &__check {
@@ -106,6 +117,7 @@
     }
 }
 
+/*Style de l'animation : au survol, sélection du plat avec case cochée verte*/
 .plat-commande {
     position: absolute;
     right: 0;
@@ -127,6 +139,7 @@
     }
 }
 
+/*Animation : plat qui apparaissent les uns après les autres*/
 .plat--1 {
     animation-delay: 200ms;
 }
@@ -161,20 +174,6 @@
 .lien-plat:hover {
     cursor: pointer;
 }
-
-/*
-.menu-entree {
-    animation: plats $duration ease-in-out backwards 500ms;
-}
-
-.menu-plat {
-    animation: plats $duration ease-in-out backwards 1000ms;
-}
-
-.menu-dessert {
-    animation: plats $duration ease-in-out backwards 1500ms;
-}
-*/
 
 /* Tablett and Desktop version : screen < 768 px*/
 @media screen and (min-width: 768px) {

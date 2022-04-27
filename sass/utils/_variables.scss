@@ -1,13 +1,15 @@
+/*Définition des variables*/
+
 /*Main colors*/
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
-$secondary-color-transparence: #ff79da20;
 $tertiary-color: #99e2d0;
+$secondary-color-transparence: #ff79da20; /*Pour le loader*/
 
 /*Greys*/
-$form-color: #ebebebff;
-$shadow-color: #dedede;
-$shadow-color-darker: darken(#dedede,30%);
-$main-color: #f6f6f6ff;
-$fct-icon: #7e7d7d;;
-$location-color:#3a3a3a;
+$form-color: #ebebebff; /*Background color du formulaire de choix de la localisation par l'utilisateur*/
+$shadow-color: #dedede; /*Ombre des btn du site*/
+$shadow-color-darker: darken(#dedede,30%); /*Ombre + foncée des btn principaux*/
+$background-grey: #f6f6f6ff; /*Fond gris page accueil et page des menus*/
+$fct-icon: #7e7d7d; /*Couleur des icones des étapes de fonctionnement du site (page d'acceuil)*/
+$darkest-grey:#3a3a3a; /*Couleur de l'icone de localisation (accueil) et le footer*/

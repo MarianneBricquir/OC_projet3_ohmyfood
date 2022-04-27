@@ -1,3 +1,6 @@
+/*Définition des animations par des Keyframes*/
+
+/*Animation du btn "coeur"*/
 @keyframes heart-filled {
     0% {
         transform: scale(0);
@@ -7,7 +10,7 @@
     }
 }
 
-/* Loading spinner */
+/* Animation du loading spinner */
 @keyframes loader {
     0% {
         transform: rotate(0deg);
@@ -17,6 +20,7 @@
     }
 }
 
+/* Animation de l'élément contenant le loader */
 @keyframes page_chargement {
     0% {
         opacity: 1;
@@ -33,21 +37,6 @@
 }
 
 /*Animations menu page */
-/* Plats : entrees, plats, desserts 
-$duration: 1s;
-@keyframes plats {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-*/
-
 /*Plats : plat après plat*/
 $anim-dur: 400ms;
 
@@ -64,7 +53,7 @@ $anim-dur: 400ms;
 }
 
 
-/* Plats : commande */
+/* Plats : commande - apparition du btn "plat-commande" (case verte cochée)*/
 @keyframes commande {
     0% {
         transform: scaleX(0);
@@ -76,6 +65,7 @@ $anim-dur: 400ms;
     }
 }
 
+/*Animation retour du btn */
 @keyframes commande-reverse {
     0% {
         transform: scaleX(1);
@@ -87,6 +77,8 @@ $anim-dur: 400ms;
     }
 }
 
+
+/*Animation pour décaler le prix lors de l'apparition du btn de sélection du plat */
 @keyframes prix {
     0% {
         transform: translateX(0);
@@ -95,6 +87,8 @@ $anim-dur: 400ms;
         transform: translateX(-85px);
     }
 }
+
+/*Animation de retour du prix à sa place*/
 @keyframes prix-reverse {
     0% {
         transform: translateX(-85px);
@@ -103,6 +97,8 @@ $anim-dur: 400ms;
         transform: translateX(0);
     }
 }
+
+/*Animation de décalage du titre du plat*/
 @keyframes a_titre {
     0% {
         width: 100%;
@@ -111,7 +107,7 @@ $anim-dur: 400ms;
         width: 80%;
     }
 }
-
+/*Animation de retour du titre à sa place*/
 @keyframes a_titre-reverse {
     0% {
         width: 80%;
@@ -121,6 +117,7 @@ $anim-dur: 400ms;
     }
 }
 
+/*Animation de décalage du texte de description*/
 @keyframes a_text {
     0% {
         width: 100%;
@@ -129,7 +126,7 @@ $anim-dur: 400ms;
         width: 62%;
     }
 }
-
+/*Animation de retour du texte de description*/
 @keyframes a_text-reverse {
     0% {
         width: 62%;

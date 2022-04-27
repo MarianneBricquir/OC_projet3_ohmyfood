@@ -1,3 +1,28 @@
+/*Les différents boutons du sites*/
+
+/*"Chargement de la page d'accueil" à l'ouverture de la page d'acceuil*/
+.chargement {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    animation: page_chargement 2s ease-in-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__loader {
+        width: 60px;
+        height: 60px;
+        z-index: 4;
+        border: 6px solid $secondary-color-transparence;
+        border-radius: 50%;
+        border-top: 6px solid $primary-color;
+        /*Animation du loader*/
+        animation: loader 2s ease-in-out forwards;
+    }
+}
+
+/*Bouton "principal" : "Nos restaurants" et "commandez"*/
 .btn-restau {
     padding: 20px;
     width: 200px;
@@ -37,6 +62,8 @@
     }
 }
 
+
+/*Bouton "Nouveau" pour les restaurants nouvellement présent sur le site*/
 .btn-new {
     position: absolute;
     margin-bottom: 165px;
@@ -49,6 +76,7 @@
     color: darken($tertiary-color, 40%);
 }
 
+/*Bouton "Coeur" : pour que l'utilisateur puisse mettre un restaurant en favoris*/
 .coeur {
     &:hover .coeur__plein {
         cursor: pointer;
@@ -75,26 +103,8 @@
     }
 }
 
-.chargement {
-    width: 100%;
-    height: 100%;
-    background: white;
-    position: fixed;
-    animation: page_chargement 2s ease-in-out forwards;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__loader {
-        width: 60px;
-        height: 60px;
-        z-index: 4;
-        border: 6px solid $secondary-color-transparence;
-        border-radius: 50%;
-        border-top: 6px solid $primary-color;
-        animation: loader 2s ease-in-out forwards;
-    }
-}
 
+/*Repsonsive : place du btn "Nouveau" dans la version desktop*/
 @media screen and (min-width: 992px) {
     .btn-new {
         position: absolute;

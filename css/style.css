@@ -1,8 +1,19 @@
 @charset "UTF-8";
 /*Utilisation du pattern 7-1 pour les fichiers sass*/
 /*Imports*/
+/*Définition des variables*/
 /*Main colors*/
+/*Pour le loader*/
 /*Greys*/
+/*Background color du formulaire de choix de la localisation par l'utilisateur*/
+/*Ombre des btn du site*/
+/*Ombre + foncée des btn principaux*/
+/*Fond gris page accueil et page des menus*/
+/*Couleur des icones des étapes de fonctionnement du site (page d'acceuil)*/
+/*Couleur de l'icone de localisation (accueil) et le footer*/
+/*Définition des mixins*/
+/*Définition des animations par des Keyframes*/
+/*Animation du btn "coeur"*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @keyframes heart-filled {
@@ -13,7 +24,7 @@
     transform: scale(1);
   }
 }
-/* Loading spinner */
+/* Animation du loading spinner */
 @keyframes loader {
   0% {
     transform: rotate(0deg);
@@ -22,6 +33,7 @@
     transform: rotate(360deg);
   }
 }
+/* Animation de l'élément contenant le loader */
 @keyframes page_chargement {
   0% {
     opacity: 1;
@@ -37,20 +49,6 @@
   }
 }
 /*Animations menu page */
-/* Plats : entrees, plats, desserts 
-$duration: 1s;
-@keyframes plats {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-*/
 /*Plats : plat après plat*/
 @keyframes plat_par_plat {
   0% {
@@ -63,7 +61,7 @@ $duration: 1s;
     opacity: 1;
   }
 }
-/* Plats : commande */
+/* Plats : commande - apparition du btn "plat-commande" (case verte cochée)*/
 @keyframes commande {
   0% {
     transform: scaleX(0);
@@ -74,6 +72,7 @@ $duration: 1s;
     opacity: 1;
   }
 }
+/*Animation retour du btn */
 @keyframes commande-reverse {
   0% {
     transform: scaleX(1);
@@ -84,6 +83,7 @@ $duration: 1s;
     opacity: 1;
   }
 }
+/*Animation pour décaler le prix lors de l'apparition du btn de sélection du plat */
 @keyframes prix {
   0% {
     transform: translateX(0);
@@ -92,6 +92,7 @@ $duration: 1s;
     transform: translateX(-85px);
   }
 }
+/*Animation de retour du prix à sa place*/
 @keyframes prix-reverse {
   0% {
     transform: translateX(-85px);
@@ -100,6 +101,7 @@ $duration: 1s;
     transform: translateX(0);
   }
 }
+/*Animation de décalage du titre du plat*/
 @keyframes a_titre {
   0% {
     width: 100%;
@@ -108,6 +110,7 @@ $duration: 1s;
     width: 80%;
   }
 }
+/*Animation de retour du titre à sa place*/
 @keyframes a_titre-reverse {
   0% {
     width: 80%;
@@ -116,6 +119,7 @@ $duration: 1s;
     width: 100%;
   }
 }
+/*Animation de décalage du texte de description*/
 @keyframes a_text {
   0% {
     width: 100%;
@@ -124,6 +128,7 @@ $duration: 1s;
     width: 62%;
   }
 }
+/*Animation de retour du texte de description*/
 @keyframes a_text-reverse {
   0% {
     width: 62%;
@@ -215,6 +220,7 @@ p {
   font-size: 16px;
 }
 
+/*Définition du header*/
 .header {
   display: flex;
   align-items: center;
@@ -262,6 +268,7 @@ p {
     padding: 2% 0% 2% 2%;
   }
 }
+/*Définition du footer*/
 .footer {
   box-sizing: border-box;
   width: 100%;
@@ -316,6 +323,30 @@ p {
     align-items: center;
   }
 }
+/*Les différents boutons du sites*/
+/*"Chargement de la page d'accueil" à l'ouverture de la page d'acceuil*/
+.chargement {
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: fixed;
+  animation: page_chargement 2s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chargement__loader {
+  width: 60px;
+  height: 60px;
+  z-index: 4;
+  border: 6px solid #ff79da20;
+  border-radius: 50%;
+  border-top: 6px solid #9356dc;
+  /*Animation du loader*/
+  animation: loader 2s ease-in-out forwards;
+}
+
+/*Bouton "principal" : "Nos restaurants" et "commandez"*/
 .btn-restau {
   padding: 20px;
   width: 200px;
@@ -353,6 +384,7 @@ p {
   transition: opacity 150ms;
 }
 
+/*Bouton "Nouveau" pour les restaurants nouvellement présent sur le site*/
 .btn-new {
   position: absolute;
   margin-bottom: 165px;
@@ -365,6 +397,7 @@ p {
   color: #278870;
 }
 
+/*Bouton "Coeur" : pour que l'utilisateur puisse mettre un restaurant en favoris*/
 .coeur:hover .coeur__plein {
   cursor: pointer;
   opacity: 1;
@@ -389,26 +422,7 @@ p {
   z-index: 2;
 }
 
-.chargement {
-  width: 100%;
-  height: 100%;
-  background: white;
-  position: fixed;
-  animation: page_chargement 2s ease-in-out forwards;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.chargement__loader {
-  width: 60px;
-  height: 60px;
-  z-index: 4;
-  border: 6px solid #ff79da20;
-  border-radius: 50%;
-  border-top: 6px solid #9356dc;
-  animation: loader 2s ease-in-out forwards;
-}
-
+/*Repsonsive : place du btn "Nouveau" dans la version desktop*/
 @media screen and (min-width: 992px) {
   .btn-new {
     position: absolute;
@@ -419,6 +433,7 @@ p {
 }
 /*fichiers scss pour les éléments selon les pages*/
 /*Page d'accueil */
+/*Section localisation des restau*/
 .location {
   width: 100%;
   height: 60px;
@@ -645,6 +660,8 @@ p {
     height: auto;
   }
 }
+/*Page des menus*/
+/*Bandeau restaurant : image*/
 .bandeau-restau {
   display: flex;
   align-items: center;
@@ -657,6 +674,7 @@ p {
   height: auto;
 }
 
+/*Menus: Nom du restau, entrées, plats, desserts*/
 .menu {
   box-sizing: border-box;
   width: 100%;
@@ -674,6 +692,9 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+}
+.menu__content {
+  /*Entrées, plats, desserts soulignés*/
 }
 .menu__content__partie {
   width: 80px;
@@ -698,6 +719,7 @@ p {
   justify-content: center;
 }
 
+/* Card plat */
 .plat {
   box-sizing: border-box;
   position: relative;
@@ -709,7 +731,10 @@ p {
   box-shadow: 4px 6px 10px 0px #dedede;
   border-radius: 20px 20px 20px 20px;
   padding: 15px;
-  animation: plat_par_plat 200ms backwards ease-in-out;
+  animation: plat_par_plat 400ms backwards ease-in-out;
+  /* Titre du plat */
+  /* Description du plat + prix */
+  /*Animation : au survol, sélection du plat avec case cochée verte*/
 }
 .plat__titre {
   width: 90%;
@@ -723,6 +748,8 @@ p {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 8px;
+  /* Description du plat */
+  /* Prix du plat */
 }
 .plat__desc__text {
   width: 80%;
@@ -751,6 +778,7 @@ p {
   -webkit-animation: a_text 0.5s ease forwards;
 }
 
+/*Style de l'animation : au survol, sélection du plat avec case cochée verte*/
 .plat-commande {
   position: absolute;
   right: 0;
@@ -772,63 +800,51 @@ p {
   font-size: 30px;
 }
 
+/*Animation : plat qui apparaissent les uns après les autres*/
 .plat--1 {
   animation-delay: 200ms;
 }
 
 .plat--2 {
-  animation-delay: 400ms;
-}
-
-.plat--3 {
   animation-delay: 600ms;
 }
 
-.plat--4 {
-  animation-delay: 800ms;
-}
-
-.plat--5 {
+.plat--3 {
   animation-delay: 1000ms;
 }
 
-.plat--6 {
-  animation-delay: 1200ms;
-}
-
-.plat--7 {
+.plat--4 {
   animation-delay: 1400ms;
 }
 
-.plat--8 {
-  animation-delay: 1600ms;
-}
-
-.plat--9 {
+.plat--5 {
   animation-delay: 1800ms;
 }
 
+.plat--6 {
+  animation-delay: 2200ms;
+}
+
+.plat--7 {
+  animation-delay: 2600ms;
+}
+
+.plat--8 {
+  animation-delay: 3000ms;
+}
+
+.plat--9 {
+  animation-delay: 3400ms;
+}
+
 .plat--10 {
-  animation-delay: 2000ms;
+  animation-delay: 3600ms;
 }
 
 .lien-plat:hover {
   cursor: pointer;
 }
 
-/*
-.menu-entree {
-    animation: plats $duration ease-in-out backwards 500ms;
-}
-
-.menu-plat {
-    animation: plats $duration ease-in-out backwards 1000ms;
-}
-
-.menu-dessert {
-    animation: plats $duration ease-in-out backwards 1500ms;
-}
-*/
 /* Tablett and Desktop version : screen < 768 px*/
 @media screen and (min-width: 768px) {
   .menu {
