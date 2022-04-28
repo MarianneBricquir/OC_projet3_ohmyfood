@@ -104,8 +104,16 @@
             font-size: 20px;
             color: $fct-icon;
         }
+        &__icon--degustez{
+                color: $primary-color;
+        }
+    }
+    &__content--degustez {
+        background-color: $primary-color-lighter;
     }
 }
+
+
 
 /*Section : Restaurants*/
 .restaurants {

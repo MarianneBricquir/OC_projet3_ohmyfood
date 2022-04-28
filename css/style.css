@@ -548,6 +548,12 @@ p {
   font-size: 20px;
   color: #7e7d7d;
 }
+.etape__content__icon--degustez {
+  color: #9356dc;
+}
+.etape__content--degustez {
+  background-color: #f2eafb;
+}
 
 /*Section : Restaurants*/
 .restaurants {
