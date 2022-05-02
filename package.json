@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:css/style.css",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/",
+    "dev": "concurrently --kill-others \"npm run sass\" \"npm run prefix\""
   },
   "repository": {
     "type": "git",
