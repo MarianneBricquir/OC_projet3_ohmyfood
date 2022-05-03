@@ -548,11 +548,15 @@ p {
   font-size: 20px;
   color: #7e7d7d;
 }
-.etape__content__icon--degustez {
-  color: #9356dc;
-}
-.etape__content--degustez {
+
+/*Hover sur les div fonctionnement*/
+.etape__content:hover {
   background-color: #f2eafb;
+  cursor: pointer;
+}
+
+.etape__content:hover .etape__content__icon {
+  color: #9356dc;
 }
 
 /*Section : Restaurants*/

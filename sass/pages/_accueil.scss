@@ -104,15 +104,17 @@
             font-size: 20px;
             color: $fct-icon;
         }
-        &__icon--degustez{
-                color: $primary-color;
-        }
-    }
-    &__content--degustez {
-        background-color: $primary-color-lighter;
     }
 }
 
+/*Hover sur les div fonctionnement*/
+.etape__content:hover {
+    background-color: $primary-color-lighter;
+    cursor: pointer;
+}
+.etape__content:hover .etape__content__icon {
+    color: $primary-color;
+}
 
 
 /*Section : Restaurants*/
