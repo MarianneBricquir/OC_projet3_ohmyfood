@@ -1,5 +1,4 @@
 /*Définition du header*/
-
 .header {
     display: flex;
     align-items: center;
@@ -12,7 +11,6 @@
         justify-content: flex-start;
     }
     &__fleche {
-        
         padding: 5% 5% 5% 5%;
         font-size: 24px;
     }
